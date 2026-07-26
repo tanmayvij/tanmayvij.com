@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="tanmayvij.com">
+  <title>tanmayvij.com</title>
+  <!-- Tile: bg token #0a0c0b. Fixed dark in both browser themes for consistent contrast. -->
+  <rect width="32" height="32" rx="7" fill="#0a0c0b"/>
+  <!-- Mark: accent token oklch(0.8 0.15 150), resolved to sRGB for favicon renderers. -->
+  <g stroke="#6edb89" fill="none" stroke-width="2.6" stroke-linecap="round">
+    <!-- $ : the shell prompt from the nav brand -->
+    <path d="M11.2 7v18"/>
+    <path d="M14.8 12.6c0-1.8-1.6-3-3.6-3s-3.6 1-3.6 2.8c0 1.9 1.6 2.7 3.6 3.6s3.6 1.7 3.6 3.6c0 1.8-1.6 2.8-3.6 2.8s-3.6-1.2-3.6-3"/>
+  </g>
+  <!-- Block cursor -->
+  <rect x="19.9" y="9.4" width="5.6" height="13" rx="1" fill="#6edb89"/>
+</svg>
