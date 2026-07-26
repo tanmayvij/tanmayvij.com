@@ -115,7 +115,7 @@ export const SITE: Site = {
 
   // The curl/terminal signature element.
   terminal: {
-    command: "curl tanmayvij.com/me",
+    command: "curl hello.tanmayvij.com",
     hint: "# run this in your terminal",
     response: [
       "TANMAY VIJ — Lead Software Engineer",
