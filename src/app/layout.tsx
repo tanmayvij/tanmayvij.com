@@ -15,7 +15,7 @@ const SITE_URL = "https://tanmayvij.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Tanmay Vij — Lead Software Engineer · Cloud & Architecture",
+  title: `${SITE.meta.titleLine} · Cloud & Architecture`,
   description:
     "Tanmay Vij designs and builds resilient, cloud-native systems — architecture first, hands-on always. AWS Certified Solutions Architect. Fluent across AWS, Azure & GCP.",
   alternates: { canonical: "/" },
@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     type: "website",
     url: SITE_URL,
     siteName: SITE.meta.name,
-    title: "Tanmay Vij — Lead Software Engineer",
+    title: SITE.meta.titleLine,
     description:
       "I design and build resilient, cloud-native systems — architecture first, hands-on always.",
     // Social card comes from the `opengraph-image.png` file convention.
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tanmay Vij — Lead Software Engineer",
+    title: SITE.meta.titleLine,
     description:
       "I design and build resilient, cloud-native systems — architecture first, hands-on always.",
   },
@@ -46,7 +46,7 @@ const personJsonLd = {
   "@type": "Person",
   name: SITE.meta.name,
   url: SITE_URL,
-  jobTitle: "Lead Software Engineer",
+  jobTitle: SITE.meta.jobTitle,
   email: `mailto:${SITE.meta.email}`,
   description: SITE.meta.tagline,
   sameAs: SITE.socials

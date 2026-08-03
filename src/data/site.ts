@@ -11,7 +11,9 @@
 export interface Meta {
   eyebrow: string;
   name: string;
+  jobTitle: string;
   role: string;
+  titleLine: string;
   tagline: string;
   positioning: string;
   domain: string;
@@ -113,11 +115,16 @@ export interface Site {
   socials: Social[];
 }
 
+const NAME = "Tanmay Vij";
+const JOB_TITLE = "Lead Software Engineer";
+
 export const SITE: Site = {
   meta: {
     eyebrow: "Engineering Leadership · Scaling Teams, Systems & Delivery",
-    name: "Tanmay Vij",
-    role: "Lead Software Engineer - Architecture-first",
+    name: NAME,
+    jobTitle: JOB_TITLE,
+    role: `${JOB_TITLE} - Architecture-first`,
+    titleLine: `${NAME} · ${JOB_TITLE}`,
     tagline:
       "I design and build resilient distributed systems - architecture first, execution always.",
     positioning:
@@ -131,7 +138,7 @@ export const SITE: Site = {
     command: "curl https://hello.tanmayvij.com",
     hint: "# run this in your terminal",
     response: [
-      "TANMAY VIJ — Lead Software Engineer",
+      `${NAME.toUpperCase()} - ${JOB_TITLE}`,
       "────────────────────────────────────",
       "role     : architect + hands-on IC",
       "focus    : resilient, cloud-native backends",
@@ -187,35 +194,34 @@ export const SITE: Site = {
     kicker: "Proof of work",
     title: "Let the numbers talk.",
     lead: "Every metric tells a story. Behind each one is a production problem, an architectural decision, and a measurable outcome.",
-    // TODO: replace with real specifics (client/context, timeframe, scale numbers).
     cards: [
       {
-        metric: "up to 70%",
-        label: "lower AWS spend",
-        problem: "A client's cloud bill was scaling faster than its traffic.",
-        did: "Re-architected compute and storage, right-sized serverless, and cut idle infrastructure.",
-        result: "Reduced monthly AWS spend by up to 70% with no loss of throughput.",
+        metric: "mission-critical",
+        label: "legacy modernization",
+        problem: "A business-critical platform had evolved over years without a cohesive architectural direction, leaving critical workflows vulnerable to failures, inconsistent event processing, and operational complexity.",
+        did: "Identified architectural weaknesses across asynchronous workflows, background processing, and service communication. Redesigned critical execution paths around idempotency, parallelism, resilience, and reliable event delivery to improve both performance and operational stability.",
+        result: "Delivered a resilient, modern platform capable of supporting high production traffic with stronger availability, lower latency, and significantly improved operational confidence.",
       },
       {
-        metric: "99.9%",
-        label: "uptime at peak load",
-        problem: "Failure-prone microservices buckled whenever traffic spiked.",
-        did: "Refactored into Dockerised NestJS services with clean boundaries and back-pressure.",
-        result: "Sustained high-traffic production load with 99.9% uptime.",
+        metric: "enterprise-ready",
+        label: "platform re-architecture",
+        problem: "Fragmented services, manual production operations, weak security, and almost no observability made the system increasingly difficult to evolve, while the lack of architectural direction left engineering operating in silos.",
+        did: "Redesigned the platform around clear service boundaries, centralized cross-cutting concerns such as IAM and billing, introduced CI/CD, observability, claim-based multi-tenancy, and standardized operational practices across the platform.",
+        result: "Evolved the platform into an enterprise-grade architecture capable of supporting large-scale production traffic for multi-billion-dollar real-estate firms, while enabling faster delivery, stronger tenant isolation, and long-term maintainability.",
       },
       {
-        metric: "audit-ready",
-        label: "data-compliance regime",
-        problem: "Infra flaws would have failed a strict geographic data-compliance audit.",
-        did: "Closed the gaps, enforced data residency, and hardened access paths.",
-        result: "Client passed compliance in a tightly regulated jurisdiction.",
+        metric: "70%",
+        label: "cloud cost reduction",
+        problem: "Cloud infrastructure costs were growing disproportionately to application demand. For a resource-constrained business, an inefficient system architecture had made the platform unnecessarily expensive to operate.",
+        did: "Refactored the system architecture to eliminate unnecessary infrastructure, redesign application delivery, and align cloud resources with actual workload characteristics instead of historical implementation choices.",
+        result: "Reduced monthly cloud spend by up to 70% while improving latency and preserving security, scalability, and high availability.",
       },
       {
-        metric: "at scale",
-        label: "serverless data pipeline",
-        problem: "A dataset too large for AWS's default service limits.",
-        did: "Built a Lambda-native pipeline that designed around the limits instead of fighting them.",
-        result: "Processed the full dataset within platform constraints.",
+        metric: "AI-native",
+        label: "enterprise knowledge platform",
+        problem: "Organizations struggled to search and retrieve information across vast collections of sensitive documents while maintaining strict tenant isolation and compliance.",
+        did: "Designed a multi-tenant RAG platform with automated document ingestion, embedding pipelines, vector search, and continuous indexing, allowing each organization to build and maintain its own isolated knowledge base directly from incoming documents.",
+        result: "Turned hours of manual document discovery into natural conversations, enabling employees to find the information they needed in seconds while preserving strict tenant isolation and data confidentiality.",
       },
     ],
   },
@@ -225,10 +231,10 @@ export const SITE: Site = {
       "Cloud since 16. My career has lived on the backend and the infrastructure beneath it — design the system, then build it.",
       "I've led frontend teams in React and Angular for years, set engineering standards, mentored engineers, and been the customer's point of contact. The through-line has always been architecture.",
     ],
-    years: "5+ years",
+    years: "6+ years",
     cert: {
       name: "AWS Certified",
-      title: "Solutions Architect – Associate",
+      title: "Solutions Architect - Associate",
       issuer: "Amazon Web Services",
       badge: "/aws-saa-badge.png",
     },

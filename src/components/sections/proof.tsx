@@ -27,11 +27,11 @@ export function Proof() {
                 <dd>{it.problem}</dd>
               </div>
               <div className="proof-row">
-                <dt>What I did</dt>
+                <dt>Architecture</dt>
                 <dd>{it.did}</dd>
               </div>
               <div className="proof-row">
-                <dt>Result</dt>
+                <dt>Outcome</dt>
                 <dd>{it.result}</dd>
               </div>
             </dl>
