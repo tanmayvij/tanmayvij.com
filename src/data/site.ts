@@ -24,19 +24,33 @@ export interface Terminal {
   response: string[];
 }
 
-export interface Pillar {
+export interface PillarCard {
   tag: string;
   title: string;
   body: string;
   keywords: string[];
 }
 
-export interface Proof {
+export interface Pillars {
+  kicker: string;
+  title: string;
+  lead: string;
+  cards: PillarCard[];
+}
+
+export interface ProofCard {
   metric: string;
   label: string;
   problem: string;
   did: string;
   result: string;
+}
+
+export interface Proof {
+  kicker: string;
+  title: string;
+  lead: string;
+  cards: ProofCard[];
 }
 
 export interface Cert {
@@ -89,8 +103,8 @@ export interface Social {
 export interface Site {
   meta: Meta;
   terminal: Terminal;
-  pillars: Pillar[];
-  proof: Proof[];
+  pillars: Pillars;
+  proof: Proof;
   background: Background;
   skills: SkillGroup[];
   principles: Principle[];
@@ -103,13 +117,12 @@ export const SITE: Site = {
   meta: {
     eyebrow: "Engineering Leadership · Scaling Teams, Systems & Delivery",
     name: "Tanmay Vij",
-    role: "Lead Software Engineer — Architecture-first",
+    role: "Lead Software Engineer - Architecture-first",
     tagline:
-      "I design and build resilient, cloud-native systems — architecture first, hands-on always.",
+      "I design and build resilient distributed systems - architecture first, execution always.",
     positioning:
-      "A senior individual contributor by choice: the person who designs the architecture, not just the one who writes the code. I lead teams and set standards in support of that — not instead of it.",
+      "Great software comes from good engineering decisions made early and executed well. I turn product ideas into production systems — designing the architecture, building the critical pieces, and helping teams deliver software that's built to evolve.",
     domain: "tanmayvij.com",
-    // TODO: confirm contact address
     email: "hello@tanmayvij.com",
   },
 
@@ -133,70 +146,79 @@ export const SITE: Site = {
   },
 
   // Three pillars — what I do.
-  pillars: [
-    {
-      tag: "01",
-      title: "Architecture & Resilient Systems",
-      body: "Fault-tolerant, event-driven systems designed from scratch. I lead legacy-to-modern modernizations and turn failure-prone services into high-traffic infrastructure that stays up under load.",
-      keywords: [
-        "event-driven",
-        "fault-tolerant",
-        "legacy modernization",
-        "microservices",
-      ],
-    },
-    {
-      tag: "02",
-      title: "Cloud & Infrastructure",
-      body: "Fluent across all three major clouds. Networking across cloud, on-prem and hybrid; serverless at scale; security and compliance; and cost — I've cut a client's cloud bill by up to 70%.",
-      keywords: ["AWS · Azure · GCP", "networking", "serverless", "cost optimization"],
-    },
-    {
-      tag: "03",
-      title: "AI-Native Engineering",
-      body: "Agents that kill mundane team work, AI-automated financial workflows, and a working understanding of how LLMs operate under the hood — including running customized models in the cloud.",
-      keywords: [
-        "agents",
-        "workflow automation",
-        "LLMs under the hood",
-        "custom models",
-      ],
-    },
-  ],
+  pillars: {
+    kicker: "What I do",
+    title: "Engineering, E2E",
+    lead: "Three disciplines that shape how I build modern software - from architecture and infrastructure to AI-native applications.",
+    cards: [
+      {
+        tag: "01",
+        title: "Architecture & Resilient Systems",
+        body: "I build resilient distributed systems that scale with the product. From modernizing legacy platforms to architecting new services, I design for reliability, observability, and production scale.",
+        keywords: [
+          "event-driven",
+          "fault-tolerant",
+          "distributed systems",
+          "legacy modernization",
+        ],
+      },
+      {
+        tag: "02",
+        title: "Cloud & Infrastructure",
+        body: "Good system architecture doesn't stop at the application layer. Designing production systems means treating networking, cloud platforms, deployment, security, and cost as parts of the same engineering problem. The result is infrastructure that's reliable, secure, and built to evolve with the product.",
+        keywords: ["AWS · Azure · GCP", "networking", "cloud architecture", "serverless"],
+      },
+      {
+        tag: "03",
+        title: "AI Systems Engineering",
+        body: "AI-native engineering has become a core part of software architecture. I design production LLM systems—from RAG pipelines and agentic workflows to vector search, model orchestration and fine-tuned models—grounded in an understanding of transformer internals and modern inference.",
+        keywords: [
+          "RAG & vector search",
+          "agentic systems",
+          "inference & fine-tuning",
+          "transformer internals",
+        ],
+      },
+    ],
+  },
 
   // Proof of work. Lead with the metric.
-  // TODO: replace with real specifics (client/context, timeframe, scale numbers).
-  proof: [
-    {
-      metric: "up to 70%",
-      label: "lower AWS spend",
-      problem: "A client's cloud bill was scaling faster than its traffic.",
-      did: "Re-architected compute and storage, right-sized serverless, and cut idle infrastructure.",
-      result: "Reduced monthly AWS spend by up to 70% with no loss of throughput.",
-    },
-    {
-      metric: "99.9%",
-      label: "uptime at peak load",
-      problem: "Failure-prone microservices buckled whenever traffic spiked.",
-      did: "Refactored into Dockerised NestJS services with clean boundaries and back-pressure.",
-      result: "Sustained high-traffic production load with 99.9% uptime.",
-    },
-    {
-      metric: "audit-ready",
-      label: "data-compliance regime",
-      problem: "Infra flaws would have failed a strict geographic data-compliance audit.",
-      did: "Closed the gaps, enforced data residency, and hardened access paths.",
-      result: "Client passed compliance in a tightly regulated jurisdiction.",
-    },
-    {
-      metric: "at scale",
-      label: "serverless data pipeline",
-      problem: "A dataset too large for AWS's default service limits.",
-      did: "Built a Lambda-native pipeline that designed around the limits instead of fighting them.",
-      result: "Processed the full dataset within platform constraints.",
-    },
-    // TODO: room for 2–3 more flagship projects with metrics.
-  ],
+  proof: {
+    kicker: "Proof of work",
+    title: "Let the numbers talk.",
+    lead: "Every metric tells a story. Behind each one is a production problem, an architectural decision, and a measurable outcome.",
+    // TODO: replace with real specifics (client/context, timeframe, scale numbers).
+    cards: [
+      {
+        metric: "up to 70%",
+        label: "lower AWS spend",
+        problem: "A client's cloud bill was scaling faster than its traffic.",
+        did: "Re-architected compute and storage, right-sized serverless, and cut idle infrastructure.",
+        result: "Reduced monthly AWS spend by up to 70% with no loss of throughput.",
+      },
+      {
+        metric: "99.9%",
+        label: "uptime at peak load",
+        problem: "Failure-prone microservices buckled whenever traffic spiked.",
+        did: "Refactored into Dockerised NestJS services with clean boundaries and back-pressure.",
+        result: "Sustained high-traffic production load with 99.9% uptime.",
+      },
+      {
+        metric: "audit-ready",
+        label: "data-compliance regime",
+        problem: "Infra flaws would have failed a strict geographic data-compliance audit.",
+        did: "Closed the gaps, enforced data residency, and hardened access paths.",
+        result: "Client passed compliance in a tightly regulated jurisdiction.",
+      },
+      {
+        metric: "at scale",
+        label: "serverless data pipeline",
+        problem: "A dataset too large for AWS's default service limits.",
+        did: "Built a Lambda-native pipeline that designed around the limits instead of fighting them.",
+        result: "Processed the full dataset within platform constraints.",
+      },
+    ],
+  },
 
   background: {
     story: [

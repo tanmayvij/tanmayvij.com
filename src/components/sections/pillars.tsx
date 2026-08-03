@@ -9,13 +9,13 @@ export function Pillars() {
       <Reveal>
         <SectionHeader
           index="01"
-          kicker="What I do"
-          title="Architect first. Hands-on always."
-          lead={SITE.meta.positioning}
+          kicker={SITE.pillars.kicker}
+          title={SITE.pillars.title}
+          lead={SITE.pillars.lead}
         />
       </Reveal>
       <div className="pillars">
-        {SITE.pillars.map((p, i) => (
+        {SITE.pillars.cards.map((p, i) => (
           <Reveal className="pillar" key={p.tag} delay={i * 90} as="article">
             <div className="pillar-tag">{p.tag}</div>
             <h3 className="pillar-title">{p.title}</h3>

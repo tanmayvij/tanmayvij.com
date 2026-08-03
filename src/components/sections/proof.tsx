@@ -9,13 +9,13 @@ export function Proof() {
       <Reveal>
         <SectionHeader
           index="02"
-          kicker="Proof of work"
-          title="Let the numbers talk."
-          lead="Each one: the problem, what I did, the result. Specifics over adjectives."
+          kicker={SITE.proof.kicker}
+          title={SITE.proof.title}
+          lead={SITE.proof.lead}
         />
       </Reveal>
       <div className="proof">
-        {SITE.proof.map((it, i) => (
+        {SITE.proof.cards.map((it, i) => (
           <Reveal className="proof-card" key={i} delay={i * 80} as="article">
             <div className="proof-metric">
               <span className="proof-num">{it.metric}</span>

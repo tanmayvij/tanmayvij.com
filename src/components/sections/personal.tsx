@@ -18,9 +18,9 @@ export function Personal() {
           ))}
           <p className="personal-invite">{P.invite}</p>
         </Reveal>
-        <Reveal className="personal-photo" delay={100}>
+        {/* <Reveal className="personal-photo" delay={100}>
           <PhotoPlaceholder shape="square" label="candid photo (optional)" />
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );
