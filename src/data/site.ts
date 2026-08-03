@@ -251,27 +251,29 @@ export const SITE: Site = {
   },
 
   skills: [
-    { group: "Languages", items: ["TypeScript / JS (Node)", "C# / .NET", "Java", "Python"] },
-    { group: "Backend", items: ["NestJS", "Spring Boot", ".NET", "Node frameworks"] },
+    { group: "AI Systems", items: ["RAG", "Agentic Workflows", "Vector Databases", "Model Orchestration", "Inference Engines"] },
+    { group: "Backend", items: ["NestJS", "Serverless", "Express", "Spring Boot", ".NET"] },
     { group: "Frontend", items: ["React", "Angular"] },
     { group: "Cloud", items: ["AWS", "Azure", "GCP"] },
     {
-      group: "Infra / DevOps",
+      group: "Platform Engineering",
       items: [
         "Docker",
-        "Serverless / Lambda",
+        "Kubernetes",
+        "Serverless",
         "Networking (cloud · on-prem · hybrid)",
         "CI/CD",
       ],
     },
     {
-      group: "Domains",
+      group: "Focus Areas",
       items: [
-        "Event-driven & microservices",
+        "Distributed systems",
+        "Event-driven architecture",
         "Legacy modernization",
         "Security & compliance",
         "Cost optimization",
-        "Applied AI / agents / LLMs",
+        "Multi-tenancy",
       ],
     },
   ],
@@ -323,9 +325,8 @@ export const SITE: Site = {
   ],
 
   personal: {
-    // TODO: 2–4 genuine interests.
     body: [
-      "Beyond the systems: I read widely, follow where the industry is heading, and like taking apart whatever new tech just dropped to see how it actually works.",
+      "Curiosity doesn't stop when work does. I enjoy understanding how complex systems work: technological, economic, or societal, I'm always reading, exploring, or experimenting with something new.",
     ],
     invite:
       "Always up for a quick chat — whether it's the industry, current affairs, or whatever new tech just dropped.",

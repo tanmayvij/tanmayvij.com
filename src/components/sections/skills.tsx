@@ -11,7 +11,7 @@ export function Skills() {
           index="04"
           kicker="Skills"
           title="The toolkit."
-          lead="Grouped for the scan."
+          lead="The stack changes. Good engineering doesn't."
         />
       </Reveal>
       <div className="skills">

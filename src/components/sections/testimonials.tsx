@@ -9,7 +9,7 @@ export function Testimonials() {
       <Reveal>
         <SectionHeader
           index="06"
-          kicker="Signal"
+          kicker="What matters most"
           title="What people who've worked with me say."
         />
       </Reveal>
