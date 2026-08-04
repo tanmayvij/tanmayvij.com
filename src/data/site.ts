@@ -312,7 +312,7 @@ export const SITE: Site = {
     },
     {
       quote:
-        "",
+        "I've worked with Tanmay for years and I can safely say he's always dependable for the most complex challenges. Whether it's designing a system from scratch or taking over a legacy system, he understands the trade-offs, aligns them with business goals, and then stays hands-on to ensure they're executed well.",
       name: "Aaditya Chakravarty",
       role: "Lead Engineer",
       company: "HighLevel",
