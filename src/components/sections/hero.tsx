@@ -18,7 +18,7 @@ export function Hero() {
           <p className="hero-positioning">{M.positioning}</p>
           <CTAButtons />
         </Reveal>
-        <Reveal className="hero-photo" delay={100}>
+        {/* <Reveal className="hero-photo" delay={100}>
           <div className="photo photo-portrait">
             <Image
               src="/tanmayvij.png"
@@ -29,7 +29,7 @@ export function Hero() {
               priority
             />
           </div>
-        </Reveal>
+        </Reveal> */}
       </div>
       <Reveal className="hero-terminal" delay={160}>
         <Terminal variant="command" />
