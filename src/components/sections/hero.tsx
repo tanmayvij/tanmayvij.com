@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { SITE } from "@/data/site";
 import { Reveal } from "@/components/reveal";
 import { CTAButtons } from "@/components/cta-buttons";
-import { PhotoPlaceholder } from "@/components/photo-placeholder";
 import { Terminal } from "@/components/terminal";
 
 /** Hero — split layout: text + CTAs beside a photo, terminal full-width below. */
@@ -19,7 +19,16 @@ export function Hero() {
           <CTAButtons />
         </Reveal>
         <Reveal className="hero-photo" delay={100}>
-          <PhotoPlaceholder shape="portrait" />
+          <div className="photo photo-portrait">
+            <Image
+              src="/tanmayvij.png"
+              alt={M.name}
+              fill
+              sizes="(max-width: 900px) 100vw, 40vw"
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          </div>
         </Reveal>
       </div>
       <Reveal className="hero-terminal" delay={160}>

@@ -2,10 +2,6 @@
  * Content for tanmayvij.com — typed, single source of truth for the page.
  * Ported from the design prototype's `window.SITE`.
  * Voice rule: specifics replace adjectives. Confident, never self-flattering.
- *
- * NOTE: several fields still hold realistic placeholder copy pending real
- * content — see the `TODO` comments. The page renders them without any visible
- * "TODO" markers (those were author annotations in the prototype).
  */
 
 export interface Meta {
@@ -228,8 +224,8 @@ export const SITE: Site = {
 
   background: {
     story: [
-      "Cloud since 16. My career has lived on the backend and the infrastructure beneath it — design the system, then build it.",
-      "I've led frontend teams in React and Angular for years, set engineering standards, mentored engineers, and been the customer's point of contact. The through-line has always been architecture.",
+      "My career has taken me across frontend, backend, cloud, and AI, but my focus has always been the same: designing production systems that are reliable, scalable, and built to evolve. Over the years I've led engineering teams, architected systems, and worked directly with customers and stakeholders to translate business requirements into technical decisions.",
+      "With every role, I've gravitated toward solving the structural problems that determine how quickly products can evolve and businesses can execute.",
     ],
     years: "6+ years",
     cert: {
@@ -241,7 +237,7 @@ export const SITE: Site = {
     courses: [
       {
         title: "Deep Learning Certification, 2020",
-        issuer: "OneFourth Labs × IIT Madras",
+        issuer: "OneFourth Labs x IIT Madras",
       },
       {
         title: "AI Hackathon — Winner, 2019",
@@ -278,24 +274,23 @@ export const SITE: Site = {
     },
   ],
 
-  // Architecture principles (his voice).
-  // TODO: Tanmay to confirm / swap in his own genuine principles.
+  // Architecture principles
   principles: [
     {
       n: "01",
-      text: "Resilience is a design decision, not a feature you bolt on later. Design for the failure mode first, then the happy path.",
+      text: "Architecture should earn its complexity. Start with the simplest architecture that solves today's problem. Complexity should be introduced because the product demands it, not because another company built it that way.",
     },
     {
       n: "02",
-      text: "Reach for microservices when team and domain boundaries demand it — not before. A well-structured monolith beats a distributed mess.",
+      text: "Good architecture lets you disconnect. The best systems are the ones you trust while you're away. That confidence comes from resilience, observability, fault tolerance, and engineering teams that can operate without depending on a single person.",
     },
     {
       n: "03",
-      text: "The cheapest infrastructure is the infrastructure you don't run. Every running service is a recurring bill and a thing that can break.",
+      text: "Design for growth, not imaginary scale. Systems should be easy to evolve, but they don't need to solve problems you'll only have years from now. Good architecture keeps future options open without paying today's complexity tax.",
     },
     {
       n: "04",
-      text: "Boring, observable systems win. Cleverness is a liability at 3am — optimise for the engineer on call, not the demo.",
+      text: "Every technical decision should make the product better. Whether it's distributed systems, cloud architecture, or AI, the first question is always the same: does this make life meaningfully easier for the people using the product?",
     },
   ],
 
@@ -303,24 +298,24 @@ export const SITE: Site = {
   testimonials: [
     {
       quote:
-        "Hands down the person you want owning the architecture. Tanmay sees the failure modes before anyone else does, and he ships.",
-      name: "[Name]",
-      role: "[Role]",
-      company: "[Company]",
+        "",
+      name: "Nicolas Berner Wolf",
+      role: "CEO",
+      company: "VisionAir Productions AB",
     },
     {
       quote:
-        "He cut our cloud spend dramatically without us ever feeling it in performance. Calm, precise, and genuinely senior.",
-      name: "[Name]",
-      role: "[Role]",
-      company: "[Company]",
+        "Tanmay has excellent knowledge across a wide range of technologies, including cloud, mobile applications, web applications, servers, AI, and many others. He is a strong communicator, a kind and genuine person, and a pleasure to work with. When working in areas that align with his strengths and interests, he consistently delivers outstanding results and is a valuable asset to the organization.",
+      name: "Gaurav Kunal",
+      role: "Founder & CEO",
+      company: "Softobotics",
     },
     {
       quote:
-        "Set the engineering standard for the whole team. The kind of IC who quietly makes everyone around him better.",
-      name: "[Name]",
-      role: "[Role]",
-      company: "[Company]",
+        "",
+      name: "Aaditya Chakravarty",
+      role: "Lead Engineer",
+      company: "HighLevel",
     },
   ],
 

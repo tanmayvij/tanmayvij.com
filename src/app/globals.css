@@ -212,7 +212,7 @@
 
 /* Photo placeholder */
 .photo { position: relative; overflow: hidden; border: 1px solid var(--line-2);
-  background: var(--bg-2); display: grid; place-items: center; }
+  background: var(--bg-3); display: grid; place-items: center; }
 .photo-stripes { position: absolute; inset: 0;
   background: repeating-linear-gradient(135deg, transparent 0 11px,
     color-mix(in srgb, var(--text) 7%, transparent) 11px 12px); }
@@ -220,6 +220,7 @@
   letter-spacing: 0.04em; color: var(--text-3); padding: 5px 10px;
   border: 1px solid var(--line); border-radius: 6px; background: var(--bg); }
 .photo-portrait { aspect-ratio: 4 / 5; width: 100%; border-radius: 16px; }
+.hero-photo .photo-portrait { max-width: 320px; margin: 0 auto; }
 .photo-square { aspect-ratio: 1 / 1; width: 100%; border-radius: 16px; }
 .photo-circle { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; }
 .photo-circle .photo-label { display: none; }
@@ -395,7 +396,7 @@
   .nav-links { display: none; }
   .layout-split .hero-grid,
   .layout-terminal .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .hero-photo .photo-portrait { max-height: 420px; width: auto; margin: 0 auto; }
+  .hero-photo .photo-portrait { max-height: 320px; max-width: 260px; width: auto; margin: 0 auto; }
   .pillars, .proof, .quotes, .skills, .principles,
   .bg-grid, .personal-grid, .footer-links { grid-template-columns: 1fr; }
   .principle { border-right: 0; }

@@ -12,7 +12,7 @@ export function Architecture() {
             index="05"
             kicker="How I think"
             title="A few things I believe about architecture."
-            lead="The clearest signal of seniority is knowing when not to build something."
+            lead="Good architecture isn't about choosing complex solutions. It's about making the right trade-offs."
           />
         </Reveal>
         <div className="principles">
