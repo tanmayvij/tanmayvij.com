@@ -294,7 +294,6 @@ export const SITE: Site = {
     },
   ],
 
-  // TODO: paste real LinkedIn recommendations + attribution.
   testimonials: [
     {
       quote:
