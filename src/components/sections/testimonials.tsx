@@ -14,7 +14,7 @@ export function Testimonials() {
         />
       </Reveal>
       <div className="quotes">
-        {SITE.testimonials.map((q, i) => (
+        {SITE.testimonials.slice(1).map((q, i) => (
           <Reveal className="quote" key={i} delay={i * 80} as="figure">
             <blockquote className="quote-text">{q.quote}</blockquote>
             <figcaption className="quote-by">
